@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+
+catalog:
+  vite: ^5.4.9
+  typescript: ^5.6.2
+  vue: ^3.5.12
+  unocss: ^0.63.6
+  '@vitejs/plugin-vue-jsx': ^4.0.1

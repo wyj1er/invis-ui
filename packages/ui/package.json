@@ -1,0 +1,60 @@
+{
+  "name": "@wyj1er/invis-ui",
+  "type": "module",
+  "version": "0.2.3",
+  "description": "Le UI invisibili",
+  "author": "wyj",
+  "license": "MIT",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/invis-ui.js",
+      "require": "./dist/invis-ui.umd.cjs"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/invis-ui.umd.cjs",
+  "module": "./dist/invis-ui.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build:all": "vite build",
+    "build:components": "tsx ./scripts/build.ts",
+    "build": "pnpm build:components && pnpm type:build",
+    "typecheck": "vue-tsc --noEmit",
+    "type:build": "vue-tsc -b --declaration --emitDeclarationOnly tsconfig.types.json",
+    "clean:dist": "rimraf dist"
+  },
+  "dependencies": {
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@unocss/core": "^0.64.0",
+    "@unocss/vite": "^0.64.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vitest/coverage-istanbul": "^2.1.3",
+    "@vue/test-utils": "^2.4.6",
+    "fs-extra": "^11.2.0",
+    "happy-dom": "^15.7.4",
+    "typescript": "catalog:",
+    "unocss": "catalog:",
+    "vite": "catalog:",
+    "vitest": "^2.1.3",
+    "vue-tsc": "^2.1.6"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
