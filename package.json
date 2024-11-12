@@ -2,6 +2,7 @@
   "name": "wyjssy-ui-vite",
   "type": "module",
   "version": "0.2.0",
+  "packageManager": "pnpm@7.19.1",
   "description": "",
   "author": "",
   "license": "ISC",
